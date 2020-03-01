@@ -1,5 +1,5 @@
 while True:
-    ch = int(input("Press 1 for encrypt Or 2 for decrypt:-\n")) 
+    ch = int(input("Press 1 for encrypt || 2 for decrypt:-\n>>>")) 
     if ch == 1:
         text = input("Text:").lower()       
 
@@ -8,11 +8,7 @@ while True:
             if text[tx*3:tx*3+3] != '': 
                 sliced.append(text[tx*3:tx*3+3])
 
-        listed=[]
-        for sl in sliced:
-            sl = list(sl)
-            listed.append(sl)
-
+        listed=[list(sl) for sl in sliced]
 
         encrypt=[]
         for li in listed:
@@ -38,8 +34,8 @@ while True:
                         encrypt.append(chr(x))
                     else:
                         encrypt.append(chr(x))
-        print("!!! Encrypted !!!\a")
         print("==========================================")
+        print("             !!! Encrypted !!!            ")
         print("".join(encrypt))
         print("==========================================\n")
 
@@ -51,11 +47,7 @@ while True:
             if text[tx*3:tx*3+3] != '': 
                 sliced.append(text[tx*3:tx*3+3])
 
-        listed=[]
-        for sl in sliced:
-            sl = list(sl)
-            listed.append(sl)
-
+        listed=[list(sl) for sl in sliced]
 
         decrypt=[]
         for li in listed:
@@ -81,7 +73,7 @@ while True:
                         decrypt.append(chr(x))
                     else:
                         decrypt.append(chr(x))
-        print("!!! Decrypted !!!\a")
         print("==========================================")
+        print("             !!! Decrypted !!!            ")
         print("".join(decrypt))
         print("==========================================\n")
